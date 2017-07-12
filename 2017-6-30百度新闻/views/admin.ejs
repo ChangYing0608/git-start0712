@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>百度管理后台</title>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script type="text/javascript" src='/jquery/dist/jquery.min.js'></script>
+	<script type="text/javascript" src='/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='/javascripts/admin.js'></script>
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="well tit">百度新闻后台管理器</div>
+			<form class="form-inline fr">
+			  <div class="form-group">
+			    <label for="username">用户名：</label>
+			    <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+			  </div>
+			  <div class="form-group">
+			    <label for="pwd">密码：</label>
+			    <input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+			  </div>
+			  <button type="button" class="log-btn btn btn-default">登录</button>
+			</form>
+			<div class="modal fade" id="myExit" tabindex="-1" role="dialog" aria-labelledby="myExitLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      </div>
+			      <div class="modal-body">
+			        确定要退出吗？
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="button" class="btn btn-primary" data-dismiss="modal">退出</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</header>
+	<article>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-lg-6">
+					<div class="well well-sm tit-l">新闻发布器</div>
+					<form class="leftSide">
+						<div class="form-group group1">
+							<label for="newName">新闻标题</label>
+							<input type="text" class="form-control" id="newName" name="newName" placeholder="请输入新闻标题">
+						</div>
+						<div class="form-group">
+							<label for="newCon">新闻正文</label>
+							<textarea style="resize:none" type="text" class="form-control" id="newCon" name="newCon" rows="4"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="newSrc">新闻图片地址</label>
+							<input type="text" class="form-control" id="newSrc" name="newSrc" placeholder="请输入新闻图片地址">
+						</div>
+						<div class="form-group">
+							<label for="newSource">新闻来源</label>
+							<input type="text" class="form-control" id="newSource" name="newSource" placeholder="请输入新闻来源">
+						</div>
+						<div class="form-group">
+							<label for="newDate">新闻日期</label>
+							<input type="text" class="form-control" id="newDate" name="newDate" placeholder="不填默认为当前时间">
+						</div>
+						<div class="form-group">
+							<label for="newSign">新闻标签</label>
+							<select class="newSign" id="newSign">
+							</select>
+						</div>
+						<button id="sub" class="btn btn-primary" data-toggle='modal' data-target='#myInsert' type="button">提交</button>
+						<div class="modal fade" id="myInsert" tabindex="-1" role="dialog" aria-labelledby="myInsertLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="myInsertLabel"></h4>
+						      </div>
+						      <div id="myInsertBody" class="modal-body">
+						        确定要插入吗？
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						        <button id="btn" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<button id="clear-btn" class="btn btn-primary" type="button">清空</button>
+					</form> 	
+				</div>
+				<div class="col-md-6 col-lg-6">
+					<div class="well well-sm tit-r">新闻列表</div>
+					<div class="rightSide">
+						<div class="listTit">
+							<span>新闻编号</span>
+							<span>新闻标题</span>
+							<span>新闻时间</span>
+							<span>操作</span>
+						</div>
+						<ul class='newsList'>
+						</ul>
+						<div class="modal fade" id="myDelete" tabindex="-1" role="dialog" aria-labelledby="myDeleteLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						      </div>
+						      <div class="modal-body">
+						        确定要删除吗？
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						        <button type="button" class="del-sure btn btn-primary" data-dismiss="modal">确定</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+		<title>登录百度注册</title>
+		<link rel='icon' href='/images/favicon.ico' />
+		<link rel='stylesheet' href='/stylesheets/register.css' />
+		<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src='/javascripts/register.js'></script>
+	</head>
+	<body>
+		<header>
+			<a href="/users"><</a>
+			<h2>登录百度注册</h2>
+		</header>
+		<article>
+			<div class="logo">
+				<img src="/images/users-logo.png">
+			</div>
+			<form>
+				<div class="txtGroup">
+					<label for="username">用户名：</label>
+					<input name="username" type="text" class="txt" id="username" placeholder="请输入用户名">
+					<span class="txtDT" id="txtDT">x</span>
+					<span class="reOk" id="reOkName">&radic;</span>
+					<span class="reNo" id="reNoName">x</span>
+				</div>
+				<div class="txtGroup">
+					<label for="phone">手机号：</label>
+					<input name="phone" type="text" class="txt" id="phone" placeholder="请输入手机号">
+					<span class="txtDT" id="phoneDT">x</span>
+					<span class="reOk" id="reOkPhone">&radic;</span>
+					<span class="reNo" id="reNoPhone">x</span>
+				</div>
+				<div class="txtGroup">
+					<label for="email">邮箱：</label>
+					<input name="email" type="text" class="txt" id="email" placeholder="请输入邮箱">
+					<span class="txtDT" id="emailDT">x</span>
+					<span class="reOk" id="reOkEmail">&radic;</span>
+				</div>
+				<div class="txtGroup">
+					<label for="pw">密码：</label>
+					<input name="pw" type="password" class="txt" id="pw" placeholder="请输入密码">
+					<span class="txtDT" id="pwDT">x</span>
+				</div>
+				<input type="submit" class="Btn" id="Btn" value="注册账号">
+			</form>
+			<div class="registerNew">
+				<span>我已同意并阅读</span>
+				<a class="fr" href="javascript:;">百度用户协议</a>
+			</div>
+		</article>
+	</body>
+</html>

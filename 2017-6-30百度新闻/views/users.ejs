@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+		<title>登录百度账号</title>
+		<link rel='icon' href='/images/favicon.ico' />
+		<link rel='stylesheet' href='/stylesheets/users.css' />
+		<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src='/javascripts/users.js'></script>
+	</head>
+	<body>
+		<header>
+			<a href="/"><</a>
+			<h2>登录百度账号</h2>
+		</header>
+		<article>
+			<div class="logo">
+				<img src="/images/users-logo.png">
+			</div>
+			<form action="/users/logo" method="post">
+				<div class="txtGroup">
+					<input name="txt" type="text" class="txt" id="txt" placeholder="手机号/邮箱/用户名">
+					<span class="txtDT" id="txtDT">x</span>
+				</div>
+				<div class="PWGroup">
+					<input type="password" class="PW" name="password" id="PW" placeholder="密码">
+					<span class="PWDT" id="PWDT">x</span>
+				</div>
+				<div class="identify">
+					<input type="text" name="Identify" id="Identify" placeholder="验证码">
+					<span class="Img"></span>
+				</div>
+				<input type="submit" class="loginBtn" id="loginBtn" value="登录">
+			</form>
+			<div class="loginNew">
+				<span class="fl">登录遇到问题</span>
+				<span class="fr">其他登录方式</span>
+			</div>
+			<a href="/register" class="registerBtn" id="registerBtn">立即注册</a>
+		</article>
+	</body>
+</html>
